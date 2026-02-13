@@ -8,6 +8,7 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
+  FaBootstrap,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
@@ -35,6 +36,7 @@ export const aboutData = [
           SiNextdotjs,
           SiFramer,
           FaWordpress,
+          FaBootstrap,
         ],
       },
       {
@@ -48,11 +50,11 @@ export const aboutData = [
     info: [
       {
         title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        stage: "2023 - 2024",
       },
       {
         title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        stage: "2022 - 2023",
       },
     ],
   },
@@ -60,16 +62,12 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Frontend Developer - Freelance",
+        stage: "2023 - Present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Web Developer - Logic Hive",
+        stage: "2021 - 2023",
       },
     ],
   },
@@ -78,15 +76,7 @@ export const aboutData = [
     info: [
       {
         title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        stage: "2021",
       },
     ],
   },
@@ -105,14 +95,14 @@ const About = () => {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex absolute bottom-0 -left-[370px] max-w-[550px]"
       >
         <Avatar />
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center z-10">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -129,9 +119,10 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
-            done remote work for agencies, consulted for startups, and
-            collabrated on digital products for business and consumer use.
+            I am a Frontend Developer with 3 years of experience. I specialize in
+            creating responsive websites using HTML, CSS, JavaScript, React,
+            Bootstrap, and WordPress. I have a passion for learning new
+            technologies and building user-friendly applications.
           </motion.p>
 
           {/* counters */}
@@ -145,7 +136,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={3} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -197,10 +188,9 @@ const About = () => {
             {aboutData.map((item, itemI) => (
               <div
                 key={itemI}
-                className={`${
-                  index === itemI &&
+                className={`${index === itemI &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}

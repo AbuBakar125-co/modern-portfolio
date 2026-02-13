@@ -1,44 +1,19 @@
 import Link from "next/link";
-
 import {
-  RiYoutubeLine,
-  RiInstagramLine,
-  RiFacebookLine,
-  RiDribbbleLine,
   RiGithubLine,
-  RiPinterestLine,
+  RiLinkedinLine,
 } from "react-icons/ri";
 
 export const socialData = [
   {
-    name: "YouTube",
-    link: "https://youtube.com",
-    Icon: RiYoutubeLine,
-  },
-  {
-    name: "Instagram",
-    link: "https://instagram.com",
-    Icon: RiInstagramLine,
-  },
-  {
-    name: "Facebook",
-    link: "https://facebook.com",
-    Icon: RiFacebookLine,
-  },
-  {
-    name: "Dribbble",
-    link: "https://dribbble.com",
-    Icon: RiDribbbleLine,
-  },
-  {
-    name: "Pinterest",
-    link: "https://pinterest.com",
-    Icon: RiPinterestLine,
-  },
-  {
     name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
+    link: "https://github.com/sanidhyy",
     Icon: RiGithubLine,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://linkedin.com",
+    Icon: RiLinkedinLine,
   },
 ];
 
@@ -52,11 +27,10 @@ const Socials = () => {
           href={social.link}
           target="_blank"
           rel="noreferrer noopener"
-          className={`${
-            social.name === "Github"
+          className={`${social.name === "Github" || social.name === "LinkedIn"
               ? "bg-accent rounded-full p-[5px] hover:text-white"
               : "hover:text-accent"
-          } transition-all duration-300`}
+            } transition-all duration-300`}
         >
           <social.Icon aria-hidden />
           <span className="sr-only">{social.name}</span>

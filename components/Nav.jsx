@@ -9,6 +9,7 @@ import {
   HiRectangleGroup,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
+  HiNewspaper,
 } from "react-icons/hi2";
 
 // nav data
@@ -21,6 +22,11 @@ export const navData = [
     name: "testimonials",
     path: "/testimonials",
     Icon: HiChatBubbleBottomCenterText,
+  },
+  {
+    name: "articles",
+    path: "/articles",
+    Icon: HiNewspaper,
   },
   {
     name: "contact",
@@ -37,9 +43,8 @@ const Nav = () => {
       <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
         {navData.map((link, i) => (
           <Link
-            className={`${
-              link.path === pathname && "text-accent"
-            } relative flex items-center group hover:text-accent transition-all duration-300`}
+            className={`${link.path === pathname && "text-accent"
+              } relative flex items-center group hover:text-accent transition-all duration-300`}
             href={link.path}
             key={i}
           >
