@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 // icons
 import {
@@ -36,7 +36,8 @@ export const navData = [
 ];
 
 const Nav = () => {
-  const pathname = usePathname();
+  const router = useRouter();
+  const pathname = router.pathname;
 
   return (
     <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">

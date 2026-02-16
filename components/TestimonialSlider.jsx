@@ -9,25 +9,53 @@ import "swiper/css/pagination";
 
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: "https://i.pravatar.cc/100?u=david",
+    name: "David Thompson",
+    position: "CEO, Frontier Solutions",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Abu Bakar Dev is a highly skilled professional. He delivered a top-tier WordPress solution that exceeded our expectations in every way.",
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
+    image: "https://i.pravatar.cc/100?u=alex",
+    name: "Alexander Reed",
+    position: "Founder, ShopSwift",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "The e-commerce platform Abu Bakar Dev built for us is fast, secure, and very easy to manage. His technical expertise is truly impressive.",
   },
   {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
+    image: "https://i.pravatar.cc/100?u=mark",
+    name: "Mark Johnson",
+    position: "Marketing Manager",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Working with Abu Bakar Dev was an absolute pleasure. He understands business requirements perfectly and translates them into great code.",
+  },
+  {
+    image: "https://i.pravatar.cc/100?u=robert",
+    name: "Robert White",
+    position: "Real Estate Director",
+    message:
+      "Abu Bakar Dev helped us revamp our website, making it mobile-responsive and much more user-friendly. Our lead generation has improved significantly.",
+  },
+  {
+    image: "https://i.pravatar.cc/100?u=thomas",
+    name: "Thomas Wright",
+    position: "Tech Startup Founder",
+    message:
+      "If you need a reliable developer who knows WordPress inside out, contact Abu Bakar Dev. He solved all our performance issues in no time.",
+  },
+  {
+    image: "https://i.pravatar.cc/100?u=kevin",
+    name: "Kevin Scott",
+    position: "Project Manager",
+    message:
+      "Abu Bakar Dev's commitment to quality is remarkable. He's communicative, fast, and builds everything with clean, maintainable code.",
+  },
+  {
+    image: "https://i.pravatar.cc/100?u=sarah",
+    name: "Sarah Jenkins",
+    position: "Creative Director",
+    message:
+      "Abu Bakar Dev is the go-to person for high-end web development. He turned our designs into a pixel-perfect reality with amazing attention to detail.",
   },
 ];
 
@@ -54,6 +82,7 @@ const TestimonialSlider = () => {
                     width={100}
                     height={100}
                     alt={person.name}
+                    className="rounded-full"
                   />
                 </div>
 

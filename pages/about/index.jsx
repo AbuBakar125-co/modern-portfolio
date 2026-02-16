@@ -9,12 +9,18 @@ import {
   FaReact,
   FaWordpress,
   FaBootstrap,
+  FaPhp,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
   SiAdobexd,
   SiFramer,
   SiNextdotjs,
+  SiElementor,
+  SiWoocommerce,
+  SiJquery,
+  SiAdobeillustrator,
+  SiCanva,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
@@ -32,16 +38,26 @@ export const aboutData = [
           FaHtml5,
           FaCss3,
           FaJs,
+          SiJquery,
+          FaBootstrap,
           FaReact,
           SiNextdotjs,
           SiFramer,
           FaWordpress,
-          FaBootstrap,
+          SiElementor,
+          SiWoocommerce,
+          FaPhp,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        icons: [
+          FaFigma,
+          SiAdobexd,
+          SiAdobephotoshop,
+          SiAdobeillustrator,
+          SiCanva,
+        ],
       },
     ],
   },
@@ -50,11 +66,11 @@ export const aboutData = [
     info: [
       {
         title: "Webby Awards - Honoree",
-        stage: "2023 - 2024",
+        stage: "2021 - 2025",
       },
       {
         title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2022 - 2023",
+        stage: "2021 - 2025",
       },
     ],
   },
@@ -63,28 +79,17 @@ export const aboutData = [
     info: [
       {
         title: "Frontend Developer - Freelance",
-        stage: "2023 - Present",
+        stage: "2021 - Present",
       },
       {
         title: "Web Developer - Logic Hive",
-        stage: "2021 - 2023",
+        stage: "2021 - 2025",
       },
     ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2021",
-      },
-    ],
-  },
+  }
 ];
 
 const About = () => {
-  const [index, setIndex] = useState(0);
-
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -100,9 +105,9 @@ const About = () => {
         <Avatar />
       </motion.div>
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-8">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center z-10">
+        <div className="flex-1 flex flex-col justify-center z-10 xl:basis-[60%]">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
@@ -110,19 +115,32 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Full Stack Developer <span className="text-accent">& </span>
+            WordPress Specialist.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] xl:max-w-none mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            I am a Frontend Developer with 3 years of experience. I specialize in
-            creating responsive websites using HTML, CSS, JavaScript, React,
-            Bootstrap, and WordPress. I have a passion for learning new
-            technologies and building user-friendly applications.
+            I’m a passionate Full Stack Developer with over 4 years of hands-on experience in building custom websites and web applications. My primary expertise lies in WordPress development and frontend technologies, where I combine creativity with functionality to deliver meaningful digital experiences.
+          </motion.p>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            className="max-w-[500px] xl:max-w-none mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+          >
+            I’ve worked on a wide range of projects – from custom WordPress themes and plugins to dynamic, interactive frontend interfaces – always focusing on performance, security, and usability. I believe clean, maintainable code and thoughtful UI/UX design are the foundation of successful digital products.
+          </motion.p>
+          <motion.p
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            animate="show"
+            className="max-w-[500px] xl:max-w-none mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+          >
+            I enjoy solving complex problems, optimizing website performance, and helping clients turn their ideas into reliable, scalable solutions. My goal is to build websites that not only look great but also drive real results.
           </motion.p>
 
           {/* counters */}
@@ -136,7 +154,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={3} duration={5} />
+                  <CountUp start={0} end={4} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -146,7 +164,7 @@ const About = () => {
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={200} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients.
@@ -156,7 +174,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={300} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects.
@@ -166,7 +184,7 @@ const About = () => {
               {/* awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
+                  <CountUp start={0} end={5} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Winning awards.
@@ -182,38 +200,53 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[35%]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemI) => (
-              <div
-                key={itemI}
-                className={`${index === itemI &&
-                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                onClick={() => setIndex(itemI)}
-              >
-                {item.title}
-              </div>
-            ))}
-          </div>
+          <div className="flex flex-col gap-y-10 pb-10">
+            {aboutData.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="flex flex-col gap-y-4">
+                {/* Category Title */}
+                <h3 className="text-accent uppercase tracking-[2px] font-bold text-xl xl:text-2xl border-b border-white/10 pb-2">
+                  {category.title}
+                </h3>
 
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemI) => (
-              <div
-                key={itemI}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
-              >
-                {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
+                {/* Category Info Items */}
+                <div className="flex flex-col gap-y-4">
+                  {category.info.map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className="flex flex-col gap-y-2 text-white/60"
+                    >
+                      {/* Item Content */}
+                      <div className="flex flex-col md:flex-row md:items-center gap-x-2">
+                        {category.title !== "skills" && (
+                          <div className="font-semibold text-white/90">{item.title}</div>
+                        )}
+                        {item.stage && (
+                          <>
+                            <div className="hidden md:flex text-white/20">|</div>
+                            <div className="text-sm font-light italic">{item.stage}</div>
+                          </>
+                        )}
+                      </div>
 
-                <div className="flex gap-x-4">
-                  {/* icons */}
-                  {item.icons?.map((Icon, iconI) => (
-                    <div key={iconI} className="text-2xl text-white">
-                      <Icon />
+                      {/* Icons (if any) */}
+                      {item.icons && (
+                        <div className="flex flex-col gap-y-2">
+                          {category.title === "skills" && (
+                            <div className="text-white/40 text-sm uppercase tracking-[1px] mb-1">
+                              {item.title}
+                            </div>
+                          )}
+                          <div className="flex gap-x-4 flex-wrap gap-y-4">
+                            {item.icons.map((Icon, iconIndex) => (
+                              <div key={iconIndex} className="text-2xl xl:text-3xl text-white/80 hover:text-accent transition-all duration-300">
+                                <Icon />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>

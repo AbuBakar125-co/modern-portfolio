@@ -31,8 +31,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+              I offer end-to-end digital solutions to help brands grow online. From design and development to content and optimization, I build experiences that look great, perform fast, and convert visitors into customers.
             </motion.p>
           </div>
 

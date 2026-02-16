@@ -20,8 +20,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Turning Vision <br /> Into{" "}
+            <span className="text-accent">Clean, Functional Code</span>
           </motion.h1>
 
           {/* subtitle */}
@@ -32,9 +32,13 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            I am a passionate Frontend Developer with 3 years of experience in
-            building responsive and user-friendly web applications. Skilled in HTML,
-            CSS, JavaScript, Bootstrap, React, and WordPress.
+            I'm a Full Stack Developer with 4+ years of experience, specializing in WordPress and modern frontend development. I create fast, secure, and visually engaging websites that help businesses build a strong digital presence.
+            <br /><br />
+            I focus on responsive design, clean code, and intuitive user experiences, delivering scalable web solutions that are easy to manage and built to perform.
+            <br /><br />
+            <strong className="text-accent">Technologies I work with:</strong>
+            <br />
+            HTML, CSS, JavaScript, React, WordPress, PHP, Bootstrap, REST APIs
           </motion.p>
 
           {/* btn */}

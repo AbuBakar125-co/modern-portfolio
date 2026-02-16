@@ -14,19 +14,26 @@ const Contact = () => {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/__forms.html", {
+    // Using FormSubmit.co for a more reliable direct email endpoint
+    fetch("https://formsubmit.co/ajax/abubakarrana2525@gmail.com", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
     })
       .then((res) => {
-        if (res.status === 200) {
-          alert("Thank you. I will get back to you ASAP.");
+        if (res.ok) {
+          alert("Thank you! Your message has been sent to abubakarrana2525@gmail.com. I will get back to you ASAP.");
+          myForm.reset();
         } else {
-          console.log(res);
+          alert("Oops! There was a problem submitting your form. Please try again or email me directly.");
         }
       })
-      .catch((error) => console.log(error))
+      .catch((error) => {
+        console.log(error);
+        alert("Something went wrong. Please check your connection and try again.");
+      })
       .finally(() => setIsLoading(false));
   };
 
