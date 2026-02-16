@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
         <meta name="author" content="AbuBakar Dev" />
         <meta name="theme-color" content="#f13024" />
         <link rel="icon" href="/favicon.svg?v=2" />
+        <meta name="google-site-verification" content="Xu8tJkv72SE7cfVcSWyFbBL40LUsS8lFvGLf1Uf7awk" />
       </Head>
 
       <TopLeftImg />
