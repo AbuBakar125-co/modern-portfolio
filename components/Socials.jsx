@@ -7,12 +7,12 @@ import {
 export const socialData = [
   {
     name: "Github",
-    link: "https://github.com/sanidhyy",
+    link: "https://github.com/AbuBakar125-co",
     Icon: RiGithubLine,
   },
   {
     name: "LinkedIn",
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/in/abu-bakar-saddique-059486252",
     Icon: RiLinkedinLine,
   },
 ];
@@ -28,8 +28,8 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer noopener"
           className={`${social.name === "Github" || social.name === "LinkedIn"
-              ? "bg-accent rounded-full p-[5px] hover:text-white"
-              : "hover:text-accent"
+            ? "bg-accent rounded-full p-[5px] hover:text-white"
+            : "hover:text-accent"
             } transition-all duration-300`}
         >
           <social.Icon aria-hidden />
