@@ -5,7 +5,7 @@ import { fadeIn } from "../../variants";
 
 const Articles = () => {
     return (
-        <div className="h-full bg-primary/30 py-36 flex items-center">
+        <div className="min-h-full bg-primary/30 pt-[140px] pb-32 flex xl:items-center">
             <Circles />
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row gap-x-8">

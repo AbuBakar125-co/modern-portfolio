@@ -3,12 +3,21 @@ import { BsArrowRight } from "react-icons/bs";
 
 import { fadeIn } from "../../variants";
 import { useState } from "react";
+import { serviceData } from "../../data/services";
+import ServiceDropdown from "../../components/ServiceDropdown";
 
 const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!selectedService) {
+      alert("Please select a service.");
+      return;
+    }
+
     setIsLoading(true);
 
     const myForm = event.target;
@@ -26,6 +35,7 @@ const Contact = () => {
         if (res.ok) {
           alert("Thank you! Your message has been sent to abubakarrana2525@gmail.com. I will get back to you ASAP.");
           myForm.reset();
+          setSelectedService("");
         } else {
           alert("Oops! There was a problem submitting your form. Please try again or email me directly.");
         }
@@ -38,8 +48,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+    <div className="min-h-full bg-primary/30">
+      <div className="container mx-auto pt-[140px] pb-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
@@ -90,6 +100,15 @@ const Contact = () => {
                 aria-required
               />
             </div>
+
+            {/* custom service dropdown */}
+            <ServiceDropdown
+              services={serviceData}
+              selectedService={selectedService}
+              onSelect={setSelectedService}
+              isLoading={isLoading}
+            />
+
             <input
               type="text"
               name="subject"

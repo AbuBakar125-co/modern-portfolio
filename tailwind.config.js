@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "15px",
+        DEFAULT: "20px",
       },
     },
     screens: {
@@ -39,11 +39,6 @@ module.exports = {
         poppins: [`var(--font-poppins)`, "sans-serif"],
         sora: [`var(--font-sora)`, "sans-serif"],
       },
-    },
-  },
-  container: {
-    padding: {
-      DEFAULT: "15px",
     },
   },
   plugins: [require("tailwind-scrollbar")],

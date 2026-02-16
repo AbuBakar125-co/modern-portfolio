@@ -6,7 +6,8 @@ import {
     FaWordpress,
     FaBootstrap,
 } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiFramer } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiFramer, SiFigma } from "react-icons/si";
+import { RxRocket } from "react-icons/rx";
 
 export const articleData = [
     {
@@ -57,4 +58,68 @@ export const articleData = [
         description: "Mastering Bootstrap and CSS grid for layouts that look great on any device or screen size.",
         content: "In today's mobile-first world, responsive design is no longer optional. Mastering techniques like fluid layouts, flexible images, and media queries is essential for reaching users on any device.\n\n### The Mobile-First Approach\nStarting your design and development with the smallest screen in mind ensures that your core content is always accessible. You can then enhance the layout as more screen real estate becomes available using progressive enhancement.\n\n### Mastering the Grid\nWhether you use Bootstrap's 12-column grid or the native CSS Grid layout, understanding how to position elements relative to the viewport is key. This allows you to create layouts that scale gracefully from watches to ultra-wide monitors.\n\n### Testing & Optimization\nResponsive design requires thorough testing across various devices and browsers. Using browser developer tools to simulate different viewports and performing real-device testing are critical steps in the development process to ensure a flawless user experience."
     },
+    {
+        slug: "mastering-react-hooks",
+        image: "/thumb3.jpg",
+        icon: <FaReact />,
+        title: "Mastering React Hooks",
+        description: "Understanding useEffect, useMemo, and custom hooks for better state management.",
+        content: "React Hooks changed the way we write functional components. Learn how to optimize performance and share logic across your app."
+    },
+    {
+        slug: "nextjs-api-routes",
+        image: "/thumb4.jpg",
+        icon: <SiNextdotjs />,
+        title: "Next.js API Routes",
+        description: "Building serverless backends directly within your Next.js applications.",
+        content: "Next.js API routes provide a straightforward way to build your API without needing a separate backend server."
+    },
+    {
+        slug: "css-grid-vs-flexbox",
+        image: "/thumb1.jpg",
+        icon: <FaCss3 />,
+        title: "Grid vs Flexbox",
+        description: "When to use CSS Grid and when to stick with Flexbox for modern layouts.",
+        content: "Choosing the right layout tool can save hours of development time. We compare Grid and Flexbox for common UI patterns."
+    },
+    {
+        slug: "framer-motion-animations",
+        image: "/thumb2.jpg",
+        icon: <SiFramer />,
+        title: "Advanced Animations",
+        description: "Creating stunning page transitions and scroll animations with Framer Motion.",
+        content: "Make your web apps feel premium with smooth, interactive animations that respond to user actions."
+    },
+    {
+        slug: "wordpress-seo-optimization",
+        image: "/thumb3.jpg",
+        icon: <FaWordpress />,
+        title: "WordPress SEO",
+        description: "Essential tips and tricks to rank your WordPress site on the first page of Google.",
+        content: "From site speed to schema markup, learn the technical SEO aspects of WordPress management."
+    },
+    {
+        slug: "modern-ui-design-trends",
+        image: "/thumb4.jpg",
+        icon: <SiFigma />,
+        title: "UI Design Trends",
+        description: "Exploring the latest design trends including glassmorphism and bento grids.",
+        content: "Stay ahead of the competition by incorporating modern UI design trends into your digital products."
+    },
+    {
+        slug: "web-security-best-practices",
+        image: "/thumb1.jpg",
+        icon: <RxRocket />,
+        title: "Web Security",
+        description: "Protecting your web applications from common vulnerabilities and cyber threats.",
+        content: "Security is a top priority. Learn how to secure your forms, headers, and data transmission."
+    },
+    {
+        slug: "accessibility-in-web-apps",
+        image: "/thumb2.jpg",
+        icon: <FaHtml5 />,
+        title: "Inclusive Design",
+        description: "How to build web applications that are accessible to everyone, including screen readers.",
+        content: "Building for everyone is not just good practice, it's essential. Learn the fundamentals of web accessibility."
+    }
 ];
