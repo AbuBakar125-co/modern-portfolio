@@ -4,7 +4,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     if (totalPages <= 1) return null;
 
     return (
-        <div className="flex items-center justify-center gap-x-4 mt-8 pb-10 xl:pb-0">
+        <div className="lg:hidden flex items-center justify-center gap-x-4 mt-8 pb-10 xl:pb-0">
             <button
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -19,8 +19,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                         key={i}
                         onClick={() => onPageChange(i + 1)}
                         className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${currentPage === i + 1
-                                ? "bg-accent text-white"
-                                : "bg-white/5 hover:bg-white/10"
+                            ? "bg-accent text-white"
+                            : "bg-white/5 hover:bg-white/10"
                             }`}
                     >
                         {i + 1}

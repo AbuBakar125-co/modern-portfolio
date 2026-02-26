@@ -9,7 +9,7 @@ export const serviceData = [];
 
 const Services = () => {
   return (
-    <div className="min-h-full bg-primary/30 pt-[140px] pb-36 flex xl:items-center">
+    <div className="min-h-screen py-32 flex items-center">
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">

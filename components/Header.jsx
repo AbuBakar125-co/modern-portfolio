@@ -10,9 +10,9 @@ const Header = () => {
         <div className="flex flex-row justify-between items-center gap-y-6 py-8">
           {/* logo */}
           <h1 className="text-3xl">
-            <span className="font-bold">AbuBakar</span>{" "}
-            <span className="font-thin">Dev</span>
+            <span className="font-bold">AbuBakar</span>
             <span className="text-accent">.</span>
+            <span className="font-thin">Dev</span>
           </h1>
 
           {/* socials */}

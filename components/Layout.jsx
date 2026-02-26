@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import TopLeftImg from "../components/TopLeftImg";
 
+import { useRouter } from "next/router";
+
 // setup font
 const sora = Sora({
   subsets: ["latin"],
@@ -13,10 +15,17 @@ const sora = Sora({
 });
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  const isFixedPage = router.pathname === "/" || router.pathname === "/about";
+
   return (
     <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`page text-white ${sora.variable
+        } font-sora relative ${isFixedPage ? "h-screen overflow-hidden" : ""}`}
     >
+      {/* fixed background */}
+      <div className="bg-site bg-cover bg-no-repeat bg-fixed fixed inset-0 z-[-1]" aria-hidden="true" />
+
       {/* metadata */}
       <Head>
         <title>AbuBakar Dev | Portfolio</title>
