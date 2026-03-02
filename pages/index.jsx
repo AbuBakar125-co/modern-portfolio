@@ -23,7 +23,7 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Turning Vision <br /> Into{" "}
+            Turning Vision Into <br />{" "}
             <span className="text-accent">Clean, Functional Code</span>
           </motion.h1>
 
