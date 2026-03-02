@@ -16,12 +16,12 @@ const sora = Sora({
 
 const Layout = ({ children }) => {
   const router = useRouter();
-  const isFixedPage = router.pathname === "/" || router.pathname === "/about";
+  const isFixedPage = router.pathname === "/";
 
   return (
     <main
-      className={`page text-white ${sora.variable
-        } font-sora relative ${isFixedPage ? "h-screen overflow-hidden" : ""}`}
+      className={`page text-white ${sora.variable} font-sora relative ${isFixedPage ? "h-screen overflow-hidden" : ""
+        }`}
     >
       {/* fixed background */}
       <div className="bg-site bg-cover bg-no-repeat bg-fixed fixed inset-0 z-[-1]" aria-hidden="true" />

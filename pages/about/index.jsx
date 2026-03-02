@@ -91,7 +91,7 @@ export const aboutData = [
 
 const About = () => {
   return (
-    <div className="h-screen bg-primary/30 py-32 flex items-center text-center xl:text-left overflow-hidden">
+    <div className="min-h-screen bg-primary/30 pt-[140px] pb-12 xl:pt-[140px] flex items-center text-center xl:text-left">
       <Circles />
 
       {/* avatar img */}

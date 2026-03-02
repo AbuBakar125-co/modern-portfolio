@@ -48,7 +48,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-32">
+    <div className="min-h-screen flex items-center justify-center pt-[140px] pb-12 xl:pt-[140px]">
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">

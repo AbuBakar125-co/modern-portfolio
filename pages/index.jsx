@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
+
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
@@ -11,7 +14,7 @@ const Home = () => {
     <div className="bg-primary/60 h-screen flex items-center overflow-hidden">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 flex items-center">
-        <div className="text-center flex flex-col justify-center py-32 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center pt-[110px] xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
@@ -30,7 +33,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-4 xl:mb-6"
           >
             I'm a Full Stack Developer with 4+ years of experience, specializing in WordPress and modern frontend development. I create fast, secure, and visually engaging websites that help businesses build a strong digital presence.
             <br /><br />
@@ -43,7 +46,13 @@ const Home = () => {
 
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
+            <Link
+              href="/work"
+              className="btn rounded-[10px] border border-white/50 px-8 py-1 transition-all duration-300 flex items-center justify-center hover:border-accent group bg-transparent hover:bg-accent/40"
+            >
+              <span className="font-bold">My Project</span>
+              <BsArrowRight className="ml-2 text-2xl group-hover:translate-x-2 transition-all duration-300" />
+            </Link>
           </div>
           <motion.div
             variants={fadeIn("down", 0.4)}
@@ -52,7 +61,13 @@ const Home = () => {
             exit="hidden"
             className="hidden xl:flex"
           >
-            <ProjectsBtn />
+            <Link
+              href="/work"
+              className="btn rounded-[10px] border border-white/50 px-8 py-1 transition-all duration-300 flex items-center justify-center hover:border-accent group bg-transparent hover:bg-accent/40"
+            >
+              <span className="font-bold">My Project</span>
+              <BsArrowRight className="ml-2 text-2xl group-hover:translate-x-2 transition-all duration-300" />
+            </Link>
           </motion.div>
         </div>
       </div>

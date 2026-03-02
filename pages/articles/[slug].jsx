@@ -41,7 +41,7 @@ const ArticleDetail = () => {
     return (
         <div className="min-h-screen bg-site">
             {/* Header Section (Dark with Background Image) */}
-            <div className="relative pt-32 pb-48 overflow-hidden">
+            <div className="relative pt-[140px] pb-48 overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
