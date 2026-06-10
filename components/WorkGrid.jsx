@@ -7,21 +7,15 @@ import { workData } from "../data/work";
 const categories = [
     "All projects",
     "Web Development",
-    "UI/UX Design",
     "Technology",
 ];
 
 const WorkGrid = () => {
     const [activeCategory, setActiveCategory] = useState("All projects");
-    const [expandedIndex, setExpandedIndex] = useState(null);
 
     const filteredProjects = activeCategory === "All projects"
         ? workData
         : workData.filter(project => project.category === activeCategory);
-
-    const toggleExpand = (index) => {
-        setExpandedIndex(expandedIndex === index ? null : index);
-    };
 
     return (
         <div className="w-full">
@@ -30,7 +24,7 @@ const WorkGrid = () => {
                 {categories.map((category, index) => (
                     <button
                         key={index}
-                        onClick={() => { setActiveCategory(category); setExpandedIndex(null); }}
+                        onClick={() => setActiveCategory(category)}
                         className={`${activeCategory === category
                             ? "bg-accent text-white shadow-lg shadow-accent/20 border-accent"
                             : "bg-white/5 text-white/60 hover:bg-white/10 border-white/10"
@@ -82,8 +76,18 @@ const WorkGrid = () => {
                                 </p>
 
                                 {/* Actions row */}
-                                <div className="flex items-center justify-between">
-                                    {project.link && project.link !== "#" ? (
+                                <div className="flex items-center">
+                                    {project.slug ? (
+                                        <Link href={`/work/${project.slug}`}>
+                                            <div className="flex items-center text-accent font-extrabold text-sm cursor-pointer group/link w-fit">
+                                                <span className="relative">
+                                                    View Details
+                                                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover/link:w-full transition-all duration-300"></span>
+                                                </span>
+                                                <span className="ml-2 transform group-hover/link:translate-x-2 transition-transform duration-300 text-lg">→</span>
+                                            </div>
+                                        </Link>
+                                    ) : project.link && project.link !== "#" ? (
                                         <Link href={project.link} target="_blank" rel="noreferrer noopener">
                                             <div className="flex items-center text-accent font-extrabold text-sm cursor-pointer group/link w-fit">
                                                 <span className="relative">
@@ -96,48 +100,7 @@ const WorkGrid = () => {
                                     ) : (
                                         <span className="text-slate-300 text-sm italic">Private Project</span>
                                     )}
-
-                                    {/* Case Study toggle */}
-                                    {project.challenge && (
-                                        <button
-                                            onClick={() => toggleExpand(index)}
-                                            className="text-xs font-bold px-3 py-1.5 rounded-full border border-slate-200 text-slate-500 hover:border-accent hover:text-accent transition-all duration-300 flex items-center gap-1"
-                                        >
-                                            {expandedIndex === index ? "Hide" : "Case Study"}
-                                            <span className={`transition-transform duration-300 ${expandedIndex === index ? "rotate-180" : ""}`}>
-                                                ↓
-                                            </span>
-                                        </button>
-                                    )}
                                 </div>
-
-                                {/* Case Study Expand Panel */}
-                                <AnimatePresence>
-                                    {expandedIndex === index && project.challenge && (
-                                        <motion.div
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: "auto" }}
-                                            exit={{ opacity: 0, height: 0 }}
-                                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                                            className="overflow-hidden"
-                                        >
-                                            <div className="mt-5 pt-5 border-t border-slate-100 space-y-3 text-[13px]">
-                                                <div className="flex flex-col gap-y-1">
-                                                    <span className="font-black text-[11px] uppercase tracking-widest text-red-400">Challenge</span>
-                                                    <p className="text-slate-500 leading-relaxed">{project.challenge}</p>
-                                                </div>
-                                                <div className="flex flex-col gap-y-1">
-                                                    <span className="font-black text-[11px] uppercase tracking-widest text-blue-500">Solution</span>
-                                                    <p className="text-slate-500 leading-relaxed">{project.solution}</p>
-                                                </div>
-                                                <div className="flex flex-col gap-y-1">
-                                                    <span className="font-black text-[11px] uppercase tracking-widest text-green-500">Result</span>
-                                                    <p className="text-slate-600 font-semibold leading-relaxed">{project.result}</p>
-                                                </div>
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
                             </div>
                         </motion.div>
                     ))}

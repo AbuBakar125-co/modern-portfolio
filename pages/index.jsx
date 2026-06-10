@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="bg-primary/60 h-screen flex items-center overflow-hidden">
       {/* text */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 flex items-center">
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 flex items-center relative z-10">
         <div className="text-center flex flex-col justify-center pt-[110px] xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
@@ -129,9 +129,7 @@ const Home = () => {
         />
 
         {/* particles */}
-        <div className="pointer-events-auto">
-          <ParticlesContainer />
-        </div>
+        <ParticlesContainer />
 
         {/* avatar */}
         <motion.div
