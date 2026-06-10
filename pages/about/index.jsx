@@ -192,6 +192,37 @@ const About = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Why Choose Me */}
+          <motion.div
+            variants={fadeIn("right", 0.7)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="mb-4"
+          >
+            <h3 className="text-accent uppercase tracking-[2px] font-bold text-sm xl:text-base mb-3 text-center xl:text-left">
+              Why Work With Me?
+            </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+              {[
+                "Fast Communication & On-Time Delivery",
+                "Clean, Maintainable & Scalable Code",
+                "Mobile-First Responsive Design",
+                "SEO-Friendly Websites by Default",
+                "Post-Launch Support Included",
+                "International Client Experience",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-x-2 text-white/70 text-sm"
+                >
+                  <span className="text-accent font-bold">✔</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
 
         {/* info */}

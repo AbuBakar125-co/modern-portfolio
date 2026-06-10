@@ -28,16 +28,16 @@ const Layout = ({ children }) => {
 
       {/* metadata */}
       <Head>
-        <title>AbuBakar Dev | Portfolio</title>
+        <title>Abu Bakar Saddique | WordPress Developer &amp; Frontend Specialist</title>
         <meta
           name="description"
-          content="AbuBakar Dev is a Full-stack web developer with 4+ years of experience."
+          content="Abu Bakar Saddique is a WordPress Developer & Frontend Specialist from Pakistan with 4+ years experience. Custom WordPress themes, Elementor, WooCommerce, speed optimization, and React development."
         />
         <meta
           name="keywords"
-          content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
+          content="WordPress Developer Pakistan, Elementor Expert, Frontend Developer Pakistan, WooCommerce Developer, Website Speed Optimization, React Developer, Custom WordPress Theme, Figma to HTML, Abu Bakar Developer, WordPress Freelancer, WordPress Customization"
         />
-        <meta name="author" content="AbuBakar Dev" />
+        <meta name="author" content="Abu Bakar Saddique" />
         <meta name="theme-color" content="#f13024" />
         <link rel="icon" href="/favicon.svg?v=2" />
         <meta name="google-site-verification" content="Xu8tJkv72SE7cfVcSWyFbBL40LUsS8lFvGLf1Uf7awk" />

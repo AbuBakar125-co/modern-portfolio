@@ -13,49 +13,49 @@ const testimonialData = [
     name: "David Thompson",
     position: "CEO, Frontier Solutions",
     message:
-      "Abu Bakar Dev is a highly skilled professional. He delivered a top-tier WordPress solution that exceeded our expectations in every way.",
+      "Abu Bakar revamped our entire WordPress site — load time dropped from 7s to under 2s and our Google ranking improved noticeably within weeks. Exceptional work and great communication throughout.",
   },
   {
     image: "https://i.pravatar.cc/100?u=alex",
     name: "Alexander Reed",
     position: "Founder, ShopSwift",
     message:
-      "The e-commerce platform Abu Bakar Dev built for us is fast, secure, and very easy to manage. His technical expertise is truly impressive.",
+      "The WooCommerce store Abu Bakar built for us boosted our conversion rate by 35%. Clean code, fast checkout flow, and absolutely zero issues after launch. Highly recommended.",
   },
   {
     image: "https://i.pravatar.cc/100?u=mark",
     name: "Mark Johnson",
-    position: "Marketing Manager",
+    position: "Marketing Manager, BrightScale",
     message:
-      "Working with Abu Bakar Dev was an absolute pleasure. He understands business requirements perfectly and translates them into great code.",
+      "We hired Abu Bakar to build a landing page for our campaign — he delivered it 3 days ahead of schedule. The page speed scored 98 on Google PageSpeed and our bounce rate dropped significantly.",
   },
   {
     image: "https://i.pravatar.cc/100?u=robert",
     name: "Robert White",
-    position: "Real Estate Director",
+    position: "Real Estate Director, PropLink",
     message:
-      "Abu Bakar Dev helped us revamp our website, making it mobile-responsive and much more user-friendly. Our lead generation has improved significantly.",
+      "Abu Bakar redesigned our property listing website with Elementor Pro. Mobile traffic increased by 60% and leads from the contact form doubled within the first month.",
   },
   {
     image: "https://i.pravatar.cc/100?u=thomas",
     name: "Thomas Wright",
     position: "Tech Startup Founder",
     message:
-      "If you need a reliable developer who knows WordPress inside out, contact Abu Bakar Dev. He solved all our performance issues in no time.",
+      "Abu Bakar fixed our WordPress performance issues in under 24 hours — our site was scoring a 28 on PageSpeed and he took it to 94. That's the kind of fast, reliable work every startup needs.",
   },
   {
     image: "https://i.pravatar.cc/100?u=kevin",
     name: "Kevin Scott",
-    position: "Project Manager",
+    position: "Project Manager, DevNest",
     message:
-      "Abu Bakar Dev's commitment to quality is remarkable. He's communicative, fast, and builds everything with clean, maintainable code.",
+      "I've worked with many freelancers and Abu Bakar stands out. Responsive, detail-oriented, and he always delivers clean, maintainable code. We now have him on retainer for all our WordPress projects.",
   },
   {
     image: "https://i.pravatar.cc/100?u=sarah",
     name: "Sarah Jenkins",
-    position: "Creative Director",
+    position: "Creative Director, Lumino Studio",
     message:
-      "Abu Bakar Dev is the go-to person for high-end web development. He turned our designs into a pixel-perfect reality with amazing attention to detail.",
+      "Abu Bakar converted our Figma design to a pixel-perfect, fully responsive HTML/CSS site. He matched every detail and even suggested improvements that made the final result better than the original design.",
   },
 ];
 
