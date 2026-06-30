@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaExternalLinkAlt, FaCheckCircle } from "react-icons/fa";
 import { workData } from "../../data/work";
+import { siteUrl } from "../../data/site";
 import { fadeIn } from "../../variants";
 import Circles from "../../components/Circles";
 
@@ -30,14 +31,18 @@ const ProjectDetail = ({ project }) => {
                     property="og:description"
                     content={project.seoDescription || project.description}
                 />
-                <meta property="og:image" content={project.path} />
+                <meta property="og:image" content={`${siteUrl}${project.path}`} />
+                <meta
+                    property="og:url"
+                    content={`${siteUrl}/work/${project.slug}`}
+                />
                 <meta property="og:type" content="article" />
                 {project.tags && (
                     <meta name="keywords" content={project.tags.join(", ")} />
                 )}
                 <link
                     rel="canonical"
-                    href={`https://yourportfolio.com/work/${project.slug}`}
+                    href={`${siteUrl}/work/${project.slug}`}
                 />
             </Head>
 

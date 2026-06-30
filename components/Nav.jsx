@@ -42,6 +42,7 @@ const Nav = () => {
               } relative flex items-center group hover:text-accent transition-all duration-300`}
             href={link.path}
             key={i}
+            aria-label={`${link.name} page`}
           >
             {/* tolltip */}
             <div
@@ -64,6 +65,7 @@ const Nav = () => {
             {/* icon */}
             <div>
               <link.Icon aria-hidden />
+              <span className="sr-only">{link.name}</span>
             </div>
           </Link>
         ))}

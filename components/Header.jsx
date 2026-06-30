@@ -9,11 +9,11 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-row justify-between items-center gap-y-6 py-4 lg:py-6">
           {/* logo */}
-          <h1 className="text-3xl">
+          <Link href="/" aria-label="AbuBakar.Dev home page" className="text-3xl">
             <span className="font-bold">AbuBakar</span>
             <span className="text-accent">.</span>
             <span className="font-thin">Dev</span>
-          </h1>
+          </Link>
 
           {/* socials */}
           <Socials />

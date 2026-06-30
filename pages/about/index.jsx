@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import CountUp from "react-countup";
 import {
@@ -222,6 +223,27 @@ const About = () => {
                 </li>
               ))}
             </ul>
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("right", 0.75)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-wrap justify-center xl:justify-start gap-3 mb-8"
+          >
+            <Link
+              href="/services"
+              className="btn rounded-[10px] border border-white/30 px-5 py-2 text-sm hover:border-accent hover:text-accent transition-all"
+            >
+              View WordPress Services
+            </Link>
+            <Link
+              href="/work"
+              className="btn rounded-[10px] border border-white/30 px-5 py-2 text-sm hover:border-accent hover:text-accent transition-all"
+            >
+              See Portfolio Projects
+            </Link>
           </motion.div>
         </div>
 

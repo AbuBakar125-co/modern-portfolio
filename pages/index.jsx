@@ -5,6 +5,7 @@ import { HiMail } from "react-icons/hi";
 
 import ParticlesContainer from "../components/ParticlesContainer";
 import Avatar from "../components/Avatar";
+import { topLinkedPages } from "../data/site";
 
 import { fadeIn } from "../variants";
 
@@ -116,6 +117,27 @@ const Home = () => {
               </div>
             ))}
           </motion.div>
+
+          <motion.nav
+            variants={fadeIn("down", 0.55)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            aria-label="Top linked portfolio pages"
+            className="hidden xl:flex flex-wrap gap-x-4 gap-y-2 justify-start text-xs text-white/45 mt-5"
+          >
+            {topLinkedPages
+              .filter((page) => page.path !== "/")
+              .map((page) => (
+                <Link
+                  key={page.path}
+                  href={page.path}
+                  className="hover:text-accent transition-colors"
+                >
+                  {page.text}
+                </Link>
+              ))}
+          </motion.nav>
         </div>
       </div>
 

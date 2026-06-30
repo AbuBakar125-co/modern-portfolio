@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
@@ -33,6 +34,26 @@ const Services = () => {
             >
               I offer end-to-end digital solutions to help brands grow online. From design and development to content and optimization, I build experiences that look great, perform fast, and convert visitors into customers.
             </motion.p>
+            <motion.div
+              variants={fadeIn("up", 0.5)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="flex flex-wrap justify-center gap-3"
+            >
+              <Link
+                href="/work"
+                className="btn rounded-[10px] border border-white/30 px-5 py-2 text-sm hover:border-accent hover:text-accent transition-all"
+              >
+                View Related Work
+              </Link>
+              <Link
+                href="/contact"
+                className="btn rounded-[10px] bg-accent border border-accent px-5 py-2 text-sm hover:bg-accent/80 transition-all"
+              >
+                Start a Project
+              </Link>
+            </motion.div>
           </div>
 
           {/* grid */}

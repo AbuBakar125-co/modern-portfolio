@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
@@ -31,6 +32,26 @@ const Work = () => {
             >
               Explore some of the projects I’ve built, combining clean design, modern development, and user-focused functionality to create impactful digital experiences.
             </motion.p>
+            <motion.div
+              variants={fadeIn("up", 0.5)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="flex flex-wrap justify-center gap-3"
+            >
+              <Link
+                href="/services"
+                className="btn rounded-[10px] border border-white/30 px-5 py-2 text-sm hover:border-accent hover:text-accent transition-all"
+              >
+                Explore Services
+              </Link>
+              <Link
+                href="/contact"
+                className="btn rounded-[10px] bg-accent border border-accent px-5 py-2 text-sm hover:bg-accent/80 transition-all"
+              >
+                Discuss Your Website
+              </Link>
+            </motion.div>
           </div>
 
           {/* grid */}
