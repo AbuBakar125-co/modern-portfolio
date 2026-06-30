@@ -1,5 +1,14 @@
 export const siteUrl = "https://abubakar.dev";
 
+export const getCanonicalUrl = (path = "/") => {
+  if (!path || path === "/") {
+    return `${siteUrl}/`;
+  }
+
+  const cleanPath = path.split("?")[0].split("#")[0].replace(/\/$/, "");
+  return `${siteUrl}${cleanPath}/`;
+};
+
 export const topLinkedPages = [
   {
     title: "Home",

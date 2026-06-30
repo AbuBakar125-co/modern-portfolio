@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaExternalLinkAlt, FaCheckCircle } from "react-icons/fa";
 import { workData } from "../../data/work";
-import { siteUrl } from "../../data/site";
+import { getCanonicalUrl, siteUrl } from "../../data/site";
 import { fadeIn } from "../../variants";
 import Circles from "../../components/Circles";
 
@@ -34,7 +34,7 @@ const ProjectDetail = ({ project }) => {
                 <meta property="og:image" content={`${siteUrl}${project.path}`} />
                 <meta
                     property="og:url"
-                    content={`${siteUrl}/work/${project.slug}`}
+                    content={getCanonicalUrl(`/work/${project.slug}`)}
                 />
                 <meta property="og:type" content="article" />
                 {project.tags && (
@@ -42,7 +42,7 @@ const ProjectDetail = ({ project }) => {
                 )}
                 <link
                     rel="canonical"
-                    href={`${siteUrl}/work/${project.slug}`}
+                    href={getCanonicalUrl(`/work/${project.slug}`)}
                 />
             </Head>
 

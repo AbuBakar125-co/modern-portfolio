@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import TopLeftImg from "../components/TopLeftImg";
-import { siteUrl, topLinkedPages, topLinkingSites } from "../data/site";
+import { getCanonicalUrl, siteUrl, topLinkedPages, topLinkingSites } from "../data/site";
 
 import { useRouter } from "next/router";
 
@@ -18,8 +18,7 @@ const sora = Sora({
 const Layout = ({ children }) => {
   const router = useRouter();
   const isFixedPage = router.pathname === "/";
-  const cleanPath = router.asPath === "/" ? "/" : router.asPath.split("?")[0].split("#")[0];
-  const canonicalUrl = `${siteUrl}${cleanPath === "/" ? "" : cleanPath}`;
+  const canonicalUrl = getCanonicalUrl(router.asPath);
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -43,7 +42,7 @@ const Layout = ({ children }) => {
       "@type": "ListItem",
       position: index + 1,
       name: page.text,
-      url: `${siteUrl}${page.path === "/" ? "" : page.path}`,
+      url: getCanonicalUrl(page.path),
     })),
   };
 
@@ -67,6 +66,8 @@ const Layout = ({ children }) => {
           content="WordPress Developer Pakistan, Elementor Expert, Frontend Developer Pakistan, WooCommerce Developer, Website Speed Optimization, React Developer, Custom WordPress Theme, Figma to HTML, Abu Bakar Developer, WordPress Freelancer, WordPress Customization"
         />
         <meta name="author" content="Abu Bakar Saddique" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large" />
         <meta name="theme-color" content="#f13024" />
         <meta property="og:site_name" content="AbuBakar.Dev" />
         <meta property="og:type" content="website" />
