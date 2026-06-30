@@ -230,7 +230,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex flex-wrap justify-center xl:justify-start gap-3 mb-8"
+            className="sr-only"
           >
             <Link
               href="/services"

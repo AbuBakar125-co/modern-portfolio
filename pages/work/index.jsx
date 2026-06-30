@@ -37,7 +37,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-wrap justify-center gap-3"
+              className="sr-only"
             >
               <Link
                 href="/services"

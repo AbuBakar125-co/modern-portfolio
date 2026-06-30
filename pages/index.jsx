@@ -124,7 +124,7 @@ const Home = () => {
             animate="show"
             exit="hidden"
             aria-label="Top linked portfolio pages"
-            className="hidden xl:flex flex-wrap gap-x-4 gap-y-2 justify-start text-xs text-white/45 mt-5"
+            className="sr-only"
           >
             {topLinkedPages
               .filter((page) => page.path !== "/")
